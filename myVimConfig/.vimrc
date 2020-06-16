@@ -1,4 +1,4 @@
-"VIM Configuration File
+﻿"VIM Configuration File
 "Configurer= Chandan_Panigrahi
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -28,6 +28,7 @@ Plugin 'klen/python-mode'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'junegunn/fzf' 
+Plugin 'morhetz/gruvbox'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -38,8 +39,10 @@ set statusline+=%*
 let g:syntastic_python_checkers = [ 'pylint', 'flake8', 'pep8', 'python']
 
 "Code Completion and Sutosuggestion
+
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = '/home/kingtazz/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py' 
+"if the YCM doesn't work just install python3-dev and run install.py in /home/kingtazz/.vim/bundle/YouCompleteMe/
 
 " Keep Plugin commands between vundle#begin/end.
 " All of your Plugins must be added before the following line
@@ -73,7 +76,8 @@ set textwidth=120
 " turn syntax highlighting on
 set t_Co=256
 syntax on
-colorscheme gruvbox
+" change the color shceme according to the supported one
+"colorscheme gruvbox
 " turn line numbers on
 set bg=dark
 set number relativenumber
